@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aKt-Wg-oef">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dev Slopes Scroll View Controller-->
+        <scene sceneID="kE2-Lp-3o6">
+            <objects>
+                <viewController id="aKt-Wg-oef" customClass="DevSlopesScrollViewController" customModule="MiraclePill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f5l-9n-p5h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sky" translatesAutoresizingMaskIntoConstraints="NO" id="Ezn-2S-KjL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="ySL-TC-FE3">
+                                <rect key="frame" x="188" y="48" width="151" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="P0G-pe-Peh"/>
+                                    <constraint firstAttribute="width" constant="151" id="mWf-sL-0hP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Mountains" translatesAutoresizingMaskIntoConstraints="NO" id="KYU-DX-q3j">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALK-Q3-p8R">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2E7-lR-Mfh" firstAttribute="bottom" secondItem="Ezn-2S-KjL" secondAttribute="bottom" id="054-Vo-KBd"/>
+                            <constraint firstItem="2E7-lR-Mfh" firstAttribute="trailing" secondItem="ySL-TC-FE3" secondAttribute="trailing" constant="36" id="2Ka-D4-1fn"/>
+                            <constraint firstItem="ALK-Q3-p8R" firstAttribute="trailing" secondItem="2E7-lR-Mfh" secondAttribute="trailing" id="FDF-Mz-BtF"/>
+                            <constraint firstItem="ySL-TC-FE3" firstAttribute="top" secondItem="2E7-lR-Mfh" secondAttribute="top" constant="28" id="Jtu-fR-BBd"/>
+                            <constraint firstItem="ALK-Q3-p8R" firstAttribute="bottom" secondItem="2E7-lR-Mfh" secondAttribute="bottom" id="Mq2-HH-4Ln"/>
+                            <constraint firstItem="Ezn-2S-KjL" firstAttribute="leading" secondItem="2E7-lR-Mfh" secondAttribute="leading" id="Pha-ok-sRx"/>
+                            <constraint firstItem="KYU-DX-q3j" firstAttribute="leading" secondItem="2E7-lR-Mfh" secondAttribute="leading" id="Vys-Vk-clG"/>
+                            <constraint firstItem="2E7-lR-Mfh" firstAttribute="bottom" secondItem="KYU-DX-q3j" secondAttribute="bottom" id="ddE-aU-hzZ"/>
+                            <constraint firstItem="ALK-Q3-p8R" firstAttribute="leading" secondItem="2E7-lR-Mfh" secondAttribute="leading" id="fPY-4h-siG"/>
+                            <constraint firstItem="2E7-lR-Mfh" firstAttribute="trailing" secondItem="Ezn-2S-KjL" secondAttribute="trailing" id="fRB-7f-D5W"/>
+                            <constraint firstItem="Ezn-2S-KjL" firstAttribute="top" secondItem="2E7-lR-Mfh" secondAttribute="top" id="mi2-Jd-6W9"/>
+                            <constraint firstItem="ALK-Q3-p8R" firstAttribute="top" secondItem="f5l-9n-p5h" secondAttribute="top" id="tGV-wF-cJu"/>
+                            <constraint firstItem="2E7-lR-Mfh" firstAttribute="trailing" secondItem="KYU-DX-q3j" secondAttribute="trailing" id="uoQ-uA-0tJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2E7-lR-Mfh"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="ALK-Q3-p8R" id="K5u-YU-aXI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRg-PE-qob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-295.50224887556226"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Mountains" width="375" height="100"/>
+        <image name="Sky" width="375" height="667"/>
+        <image name="Sun" width="53" height="53"/>
+    </resources>
+</document>

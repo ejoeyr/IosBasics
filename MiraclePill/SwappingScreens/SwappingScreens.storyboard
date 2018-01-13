@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yga-K0-Tnh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Swapping Screens View Controller-->
+        <scene sceneID="eOd-Ec-HLH">
+            <objects>
+                <viewController id="Yga-K0-Tnh" customClass="SwappingScreensViewController" customModule="MiraclePill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vh3-Kd-FhV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IVC-Op-9g6">
+                                <rect key="frame" x="0.0" y="278.5" width="375" height="130"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bp1-uY-qoK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inu-hk-6QL">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSf-JG-HvJ">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="30"/>
+                                        <state key="normal" title="LOGIN"/>
+                                        <connections>
+                                            <segue destination="hLE-1I-PGT" kind="show" id="hvq-co-ECJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IVC-Op-9g6" firstAttribute="centerX" secondItem="ftT-16-ULa" secondAttribute="centerX" id="6Kw-Hz-740"/>
+                            <constraint firstItem="IVC-Op-9g6" firstAttribute="leading" secondItem="ftT-16-ULa" secondAttribute="leading" id="YEi-nb-dbq"/>
+                            <constraint firstItem="IVC-Op-9g6" firstAttribute="centerY" secondItem="ftT-16-ULa" secondAttribute="centerY" id="j2k-et-gd6"/>
+                            <constraint firstItem="ftT-16-ULa" firstAttribute="trailing" secondItem="IVC-Op-9g6" secondAttribute="trailing" id="jO4-ef-J8j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ftT-16-ULa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bhy-Zj-h4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="-205"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="zlI-Zh-YO4">
+            <objects>
+                <viewController id="hLE-1I-PGT" customClass="SecondViewController" customModule="MiraclePill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1IK-FY-KlY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n88-dG-DNb">
+                                <rect key="frame" x="0.0" y="9" width="32" height="30"/>
+                                <state key="normal" title="EXIT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="hLE-1I-PGT" eventType="touchUpInside" id="BAY-je-sSF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gO-eJ-mtE">
+                                <rect key="frame" x="131" y="328.5" width="113" height="30"/>
+                                <state key="normal" title="Load 3rd Screen"/>
+                                <connections>
+                                    <action selector="loadThirdScreenPressed:" destination="hLE-1I-PGT" eventType="touchUpInside" id="ENQ-d1-9WH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ce-PA-8Dn">
+                                <rect key="frame" x="132" y="397" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Load 4th screen"/>
+                                <connections>
+                                    <action selector="loadFourthViewController:" destination="hLE-1I-PGT" eventType="touchUpInside" id="i7I-TP-s5t"/>
+                                    <action selector="loadThirdScreenPressed:" destination="hLE-1I-PGT" eventType="touchUpInside" id="mhq-Xm-EAe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78658217191696167" green="0.65844945632843566" blue="0.6969923354238885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5gO-eJ-mtE" firstAttribute="centerY" secondItem="GVV-UC-tw7" secondAttribute="centerY" id="b4T-JI-GFi"/>
+                            <constraint firstItem="n88-dG-DNb" firstAttribute="top" secondItem="1IK-FY-KlY" secondAttribute="top" constant="9" id="gV9-9f-k7T"/>
+                            <constraint firstItem="n88-dG-DNb" firstAttribute="leading" secondItem="GVV-UC-tw7" secondAttribute="leading" id="vFD-vz-tEp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GVV-UC-tw7"/>
+                    </view>
+                    <connections>
+                        <segue destination="PIR-xe-Sfw" kind="show" identifier="ThirdViewController" id="alh-Za-xNz"/>
+                        <segue destination="2fq-sO-Ykn" kind="show" identifier="FourthViewController" id="aw5-gg-VxL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ih4-47-eSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="-206"/>
+        </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="2Ue-oB-7jt">
+            <objects>
+                <viewController id="2fq-sO-Ykn" customClass="FourthViewController" customModule="MiraclePill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZVg-89-YHe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhq-qp-Rsf">
+                                <rect key="frame" x="94" y="273" width="147" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="vS4-CQ-rhX"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataLabel" destination="xhq-qp-Rsf" id="Nh7-Sl-Uz1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3L-TK-IhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="-656"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="HwP-W2-vNd">
+            <objects>
+                <viewController id="PIR-xe-Sfw" customClass="ThirdViewController" customModule="MiraclePill" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="db1-yi-yiS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvG-t6-QOc">
+                                <rect key="frame" x="166" y="333" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vvG-t6-QOc" firstAttribute="centerY" secondItem="ZfS-xk-WWa" secondAttribute="centerY" id="frS-gJ-QWa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZfS-xk-WWa"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataLabel" destination="vvG-t6-QOc" id="CfA-HW-Fyr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRn-EI-SIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="167"/>
+        </scene>
+    </scenes>
+</document>
